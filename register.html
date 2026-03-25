@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Here</title>
+    <link rel="icon" href="./files/logo.png">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+
+<body class="register-body">
+
+    <nav>
+        <img src="./files/logo.png" class="logo" alt="Logo" title="FirstFlight Travels">
+
+        <ul class="navbar">
+            <li>
+                <a href="./index.html">Home</a>
+                <a href="./index.html#locations">Locations</a>
+                <a href="./index.html#package">Packages</a>
+                <a href="./about.html">About Us</a>
+                <a href="./contact.html">Contact Us</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="booking">
+        <div class="book_boc">
+            <h1>Book Now</h1>
+            <div class="booking_detail">
+                <input type="text" id="c_name" placeholder="Name">
+                <input type="email" id="mail" placeholder="E-mail">
+                <input type="number" id="num" placeholder="Phone Number">
+
+                <!-- Country Dropdown -->
+                <select id="country" name="country" required>
+                    <option value="">-- Select Country --</option>
+                    <option value="India">India</option>
+                    <option value="Turkey">Turkey</option>
+                    <option value="France">France</option>
+                    <option value="Indonesia">Indonesia</option>
+                    <option value="Dubai">Dubai</option>
+                    <option value="Switzerland">Switzerland</option>
+                    <option value="Andaman & Nicobar">Andaman & Nicobar</option>
+                    <option value="Italy">Italy</option>
+                </select>
+
+                <!-- Location Dropdown -->
+                <select id="location" name="location" required>
+                    <option value="">-- Select Location --</option>
+                </select>
+
+                <!-- Number of Adults -->
+                <input type="number" id="members" name="members" placeholder="Number of Adults" min="1" required>
+
+                <!-- Number of Children -->
+                <input type="number" id="children" name="children" placeholder="Number of Children" min="0">
+
+                <!-- Package Selection -->
+                <select id="package" name="package" required>
+                    <option value="">-- Select Package --</option>
+                    <option value="Bronze">Bronze Package</option>
+                    <option value="Silver">Silver Package</option>
+                    <option value="Gold">Gold Package</option>
+                    <option value="Platinum">Platinum Package</option>
+                </select>
+
+                <!-- Departure Date -->
+                <input type="date" id="departureDate" name="departureDate" required>
+
+                <!-- Departure Location -->
+                <select id="departureLocation" name="departureLocation" required>
+                    <option value="">-- Departure Location --</option>
+                    <option value="Kolkata">Kolkata</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Mumbai">Mumbai</option>
+                </select>
+
+                <!-- Extra Description -->
+                <textarea id="description" name="description" placeholder="Extra requirements or description..."
+                    rows="4"></textarea>
+
+                <!-- Submit Button -->
+                
+            </div>
+            <button class="book">Submit</button>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <section class="footer">
+        <div class="foot">
+            <div class="footer-content">
+
+                <div class="footlinks">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="./register.html">Register</a></li>
+                        <li><a href="./about.html">About Us</a></li>
+                        <li><a href="./contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footlinks">
+                    <h4>Connect</h4>
+                    <div class="social">
+                        <a href="" target="_blank"><i class='bx bxl-facebook'></i></a>
+                        <a href="" target="_blank"><i class='bx bxl-instagram'></i></a>
+                        <a href="" target="_blank"><i class='bx bxl-twitter'></i></a>
+                        <a href="" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                        <a href="" target="_blank"><i class='bx bxl-youtube'></i></a>
+                        <a href="" target="_blank"><i class='bx bxl-wordpress'></i></a>
+                        <a href="" target="_blank"><i class='bx bxl-github'></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="end">
+            <p>Copyright © 2024 Firstflight Travels All Rights Reserved.<br>Website developed by: Jyotirmay</p>
+        </div>
+    </section>
+
+    <!-- Javascript -->
+
+
+</body>
+<script src="booking.js"></script>
+
+</html>

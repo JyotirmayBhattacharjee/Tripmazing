@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+
+    <link rel="icon" href="./files/logo.png">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+
+<body class="aboutbody">
+
+    <!-- NAVBAR -->
+    <nav class="navbar-container">
+        <img src="./files/logo.png" class="logo" alt="Logo" title="FirstFlight Travels">
+
+        <ul class="navbar">
+            <li class="nav-links">
+                <a href="./index.html">Home</a>
+                <a href="./index.html#locations">Locations</a>
+                <a href="./index.html#package">Packages</a>
+                <a href="./about.html">About Us</a>
+                <a href="./contact.html">Contact Us</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="abtout_he">
+        <h1>About <span>Us</span></h1>
+    </div>
+
+
+    <!-- ABOUT SECTION -->
+    <section class="about">
+
+        <div class="about-main">
+
+            <!-- IMAGE SECTION -->
+            <div class="about-image">
+                <img src="files/abt.png" alt="My Photo">
+            </div>
+
+            <!-- TEXT SECTION -->
+            <div class="abt-text">
+
+                <p class="about-intro">
+                    Welcome to TRIPMAZING. We are a trusted tourist agency that helps people
+                    explore beautiful destinations with comfort, safety, and happiness.
+                </p>
+
+                <!-- CONTENT WRAPPER -->
+                <div class="about-content">
+
+                    <!-- WHY CHOOSE US -->
+                    <div class="why-choose-us">
+                        <h3>Why Choose Us</h3>
+                        <ul class="why-list">
+                            <li> Affordable tour packages</li>
+                            <li> Experienced travel guides</li>
+                            <li> 24/7 customer support</li>
+                            <li> Customized travel plans</li>
+                            <li> Safe and comfortable journeys</li>
+                        </ul>
+                    </div>
+
+                    <!-- CUSTOMER SATISFACTION -->
+                    <div class="customer-satisfaction">
+                        <h3>Customer Satisfaction</h3>
+                        <p>
+                            Customer satisfaction is our top priority.
+                            We work hard to give the best service and memorable travel experiences.
+                        </p>
+
+                        <div class="customer-images">
+                            <img src="https://www.travel4less.us/wp-content/uploads/2017/07/REN-PISA2.jpg" alt="">
+                            <img src="https://media.istockphoto.com/id/528477676/photo/tourists-in-thailand.jpg?s=612x612&w=0&k=20&c=_PodKIN-zcDYdpsU-7xgxDPaS7RE0isUBphJ2U5SSWw="
+                                alt="">
+                            <img src="https://assets-global.website-files.com/56e9debf633486e330198479/6037da8f9802d561500f9812_group%20travel.jpg"
+                                alt="">
+                            <img src="https://static.wixstatic.com/media/0f3253_ed2874ca84744dcd9a99dfcf74b65f97~mv2.jpg/v1/fill/w_1000,h_667,al_c,q_85,usm_0.66_1.00_0.01/0f3253_ed2874ca84744dcd9a99dfcf74b65f97~mv2.jpg"
+                                alt="">
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+
+
+
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="foot">
+            <div class="footer-content">
+
+                <div class="footlinks">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="./register.html">Register</a></li>
+                        <p class="phone" onclick="copyPhone()">+91 98765 43210
+                            <span id="copyMsg" class="copy-msg">Copied!</span>
+                        </p>
+
+
+
+                        <li><a>tripmazing2024.in</a></li>
+                    </ul>
+                </div>
+
+                <div class="footlinks">
+                    <h4>Connect</h4>
+                    <div class="social">
+                        <a href=""><i class='bx bxl-facebook'></i></a>
+                        <a href=""><i class='bx bxl-instagram'></i></a>
+                        <a href=""><i class='bx bxl-twitter'></i></a>
+                        <a href=""><i class='bx bxl-linkedin'></i></a>
+                        <a href=""><i class='bx bxl-youtube'></i></a>
+                        <a href=""><i class='bx bxl-wordpress'></i></a>
+                        <a href=""><i class='bx bxl-github'></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="end">
+            <p>Copyright © 2026 Tripmazing Travels All Rights Reserved.<br>Website developed by: Jyotirmay</p>
+        </div>
+    </section>
+
+</body>
+
+<script>
+    function copyPhone() {
+        const text = "+91 98765 43210";
+        const msg = document.getElementById("copyMsg");
+
+        navigator.clipboard.writeText(text);
+
+        msg.style.display = "inline";
+
+        setTimeout(() => {
+            msg.style.display = "none";
+        }, 1500);
+    }
+</script>
+
+
+
+</html>
