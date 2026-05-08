@@ -483,10 +483,10 @@
     width: 120px;
     height: 110px;
 }
-}
 
 
-/* ══════════════════════════════════════
+
+/* ═════════════════════════════════════
    Small Mobile  ≤ 480px
 ══════════════════════════════════════ */
 @media (max-width: 480px) {
@@ -593,9 +593,11 @@
 /* Large Tablets & Small Laptops (max-width: 991px) */
 @media (max-width: 680px) {
     .about-main {
-        flex-direction: column; /* Stack image and text vertically */
+        flex-direction: column;
+        /* Stack image and text vertically */
         align-items: center;
-        padding: 0 20px; /* Add breathing room on the sides */
+        padding: 0 20px;
+        /* Add breathing room on the sides */
     }
 
     .about-image {
@@ -606,16 +608,20 @@
     }
 
     .about-image img {
-        width: 60%; /* Scale down the main image slightly */
-        height: auto; /* Prevent image distortion */
+        width: 60%;
+        /* Scale down the main image slightly */
+        height: auto;
+        /* Prevent image distortion */
     }
 
     .abt-text {
-        width: 100%; /* Take up full width on smaller screens */
+        width: 100%;
+        /* Take up full width on smaller screens */
     }
 
     .customer-images {
-        flex-wrap: wrap; /* Allow images to wrap to the next line */
+        flex-wrap: wrap;
+        /* Allow images to wrap to the next line */
         justify-content: center;
     }
 }
@@ -623,7 +629,8 @@
 /* Mobile Devices (max-width: 768px) */
 @media (max-width: 768px) {
     .abtout_he h1 {
-        font-size: 32px; /* Scale down heading */
+        font-size: 32px;
+        /* Scale down heading */
     }
 
     .about-intro {
@@ -638,7 +645,8 @@
 
     .why-list li {
         font-size: 18px;
-        padding-left: 30px; /* Ensure checkmarks don't overlap text */
+        padding-left: 30px;
+        /* Ensure checkmarks don't overlap text */
     }
 
     .customer-satisfaction p {
@@ -647,11 +655,13 @@
     }
 
     .about-image img {
-        width: 80%; /* Take up more space on mobile */
+        width: 80%;
+        /* Take up more space on mobile */
     }
 
     .customer-images img {
-        width: 120px; /* Shrink customer images */
+        width: 120px;
+        /* Shrink customer images */
         height: 120px;
     }
 }
@@ -659,7 +669,8 @@
 /* Small Mobile Devices (max-width: 480px) */
 @media (max-width: 480px) {
     .abtout_he {
-        margin-top: 60px; /* Reduce top margin to save space */
+        margin-top: 60px;
+        /* Reduce top margin to save space */
     }
 
     .abtout_he h1 {
@@ -669,15 +680,18 @@
     .about-intro,
     .customer-satisfaction p,
     .why-list li {
-        font-size: 16px; /* Standardize body text size for readability */
+        font-size: 16px;
+        /* Standardize body text size for readability */
     }
 
     .about-image img {
-        width: 100%; /* Full width for the smallest screens */
+        width: 100%;
+        /* Full width for the smallest screens */
     }
 
     .customer-images img {
-        width: 100px; /* Further shrink customer images */
+        width: 100px;
+        /* Further shrink customer images */
         height: 100px;
     }
 }
