@@ -1,0 +1,683 @@
+/* ============================================================
+   responsive.css — Tripmazing Home Page
+   Link AFTER style.css:
+   <link rel="stylesheet" href="./css/responsive.css">
+   ============================================================ */
+
+
+/* ── Hamburger button (hidden on desktop) ── */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 8px;
+    margin-right: 33px;
+    margin-left: auto;
+    z-index: 1001;
+}
+
+.hamburger span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    background: white;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
+/* ══════════════════════════════════════
+   Tablet  ≤ 1024px
+══════════════════════════════════════ */
+@media (max-width: 1024px) {
+
+    nav .logo {
+        margin-left: 4%;
+    }
+
+    .navbar a {
+        font-size: 15px;
+        padding: 8px 14px;
+    }
+
+    .title h1 {
+        font-size: 8vh;
+    }
+
+    .button {
+        font-size: 20px;
+        padding: 10px 24px;
+    }
+
+    .rowitems {
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .col-content img {
+        height: 380px;
+    }
+
+    .image img {
+        height: 400px;
+    }
+
+    .newsletter form input:first-child {
+        width: 250px;
+    }
+}
+
+
+/* ══════════════════════════════════════
+   Mobile  ≤ 768px
+══════════════════════════════════════ */
+@media (max-width: 768px) {
+
+
+
+    .banner {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .banner video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        object-fit: cover;
+        pointer-events: none;
+    }
+
+    /* ── Navbar ── */
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 6px 16px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        border: none;
+        /* remove all 4-side border */
+        border-bottom: 2px solid black;
+        /* keep only bottom line    */
+    }
+
+    nav .logo {
+        width: 48px;
+        margin: 8px 0 8px 0;
+    }
+
+    /* Show hamburger */
+    .hamburger {
+        display: flex;
+    }
+
+    /* ── Dropdown menu (hidden by default) ── */
+    nav ul.navbar {
+        display: none;
+        flex-direction: column;
+        background-color: rgb(21, 74, 74);
+        position: fixed;
+        top: 68px;
+        left: 0;
+        width: 100%;
+        padding: 12px 0 20px;
+        margin: 0;
+        border: none;
+        border-left: none;
+        padding-left: 0;
+        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+        z-index: 998;
+        margin-right: 10px;
+    }
+
+    nav ul.navbar.open {
+        display: flex;
+    }
+
+    nav ul.navbar li {
+        display: block;
+        margin: 0;
+        padding: 0;
+        border: none;
+        list-style: none;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 16px;
+        padding: 14px 28px;
+        border-radius: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .navbar a:hover {
+        background: rgba(255, 255, 255, 0.12);
+        color: white;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    /* ── Hero ── */
+    .title {
+        margin-top: 30vh;
+        padding: 10px 20px;
+    }
+
+    .title h1 {
+        font-size: 7vw;
+        letter-spacing: 3px;
+    }
+
+    .title p {
+        font-size: 14px;
+    }
+
+    .button {
+        font-size: 16px;
+        padding: 10px 22px;
+        margin-top: 3vh;
+    }
+
+    /* ── Services ── */
+    .text h2 {
+        font-size: 24px;
+        margin-top: 30px;
+    }
+
+    .rowitems {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+        margin: 16px 16px 10px;
+    }
+
+    .container-box {
+        padding: 24px 10px;
+    }
+
+    .container-image img {
+        height: 75px;
+        width: 75px;
+    }
+
+    .container-box h4 {
+        font-size: 15px;
+    }
+
+    .container-box p {
+        font-size: 13px;
+    }
+
+    /* ── Locations ── */
+    .package-title h2 {
+        font-size: 28px;
+        padding-top: 40px;
+    }
+
+    .location-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 0 16px;
+    }
+
+    .col-content {
+        width: 100%;
+        max-width: 480px;
+    }
+
+    .col-content img {
+        height: 55vh;
+        width: 100%;
+        margin-bottom: 24px;
+        border-radius: 18px;
+
+    }
+
+    .col-content h5 {
+        font-size: 18px;
+        bottom: 62px;
+    }
+
+    /* ── Packages ── */
+    .package-content {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 16px;
+        gap: 16px;
+    }
+
+    .box {
+        width: 100%;
+        max-width: 480px;
+    }
+
+    .image img {
+        height: 260px;
+        border-radius: 18px;
+    }
+
+    .image h3 {
+        font-size: 22px;
+    }
+
+    .location h4 {
+        font-size: 20px;
+    }
+
+    .pac-details li {
+        font-size: 15px;
+    }
+
+    /* ── Newsletter ── */
+    .newsletter {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .newstext h2 {
+        margin-top: 50px;
+        font-size: 26px;
+    }
+
+    .newstext p {
+        font-size: 15px;
+    }
+
+    .newsletter form {
+        margin-top: 24px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        width: 320px;
+    }
+
+    .newsletter form input:first-child {
+        width: 320px;
+        padding: 18px 130px 18px 22px;
+        font-size: 15px;
+    }
+
+    .newsletter form input:last-child {
+        top: 5px;
+        right: 5px;
+        padding: 13px 18px;
+        font-size: 15px;
+    }
+
+    /* ── Footer ── */
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+        padding: 0 20px;
+    }
+
+    .footlinks h4::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .end p {
+        font-size: 12px;
+        padding: 0 12px;
+    }
+}
+
+
+/* ══════════════════════════════════════
+   Small Mobile  ≤ 480px
+══════════════════════════════════════ */
+@media (max-width: 480px) {
+
+    .title h1 {
+        font-size: 9vw;
+    }
+
+    .title p {
+        font-size: 19px;
+    }
+
+    /* Services: single column */
+    .rowitems {
+        grid-template-columns: 1fr;
+        margin: 12px;
+    }
+
+    /* Newsletter: stack button below input */
+    .newsletter form {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .newsletter form input:first-child {
+        width: 90%;
+        max-width: 280px;
+        padding: 16px 20px;
+        border-radius: 20px;
+    }
+
+    .newsletter form input:last-child {
+        position: static;
+        width: 90%;
+        max-width: 280px;
+        margin-top: 10px;
+        border-radius: 20px;
+        text-align: center;
+    }
+
+    .social a {
+        height: 36px;
+        width: 36px;
+        font-size: 20px;
+    }
+}
+
+
+/* ══════════════════════════════
+       About Us Page  ≤ 768px
+    ══════════════════════════════ */
+
+.abtout_he {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.abtout_he h1 {
+    font-size: 30px;
+}
+
+.about {
+    padding: 0 16px;
+}
+
+.about-main {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.about-image {
+    width: 100%;
+    justify-content: center;
+    padding-left: 0;
+}
+
+.about-image img {
+    width: 65%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.abt-text {
+    width: 100%;
+    padding: 0 10px;
+    margin-top: 0;
+}
+
+.about-intro {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 24px;
+}
+
+.about-content {
+    gap: 30px;
+}
+
+.why-choose-us h3,
+.customer-satisfaction h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.why-list li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.customer-satisfaction p {
+    font-size: 15px;
+    line-height: 26px;
+}
+
+.customer-images {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.customer-images img {
+    width: 120px;
+    height: 110px;
+}
+}
+
+
+/* ══════════════════════════════════════
+   Small Mobile  ≤ 480px
+══════════════════════════════════════ */
+@media (max-width: 480px) {
+
+    /* ── Video full cover ── */
+    .banner {
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .banner video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        object-fit: cover;
+        pointer-events: none;
+    }
+
+    /* ── Home ── */
+    .title h1 {
+        font-size: 9vw;
+    }
+
+    .title p {
+        font-size: 13px;
+    }
+
+    .rowitems {
+        grid-template-columns: 1fr;
+        margin: 12px;
+    }
+
+    .newsletter form {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .newsletter form input:first-child {
+        width: 90%;
+        max-width: 280px;
+        padding: 16px 20px;
+        border-radius: 20px;
+    }
+
+    .newsletter form input:last-child {
+        position: static;
+        width: 90%;
+        max-width: 280px;
+        margin-top: 10px;
+        border-radius: 20px;
+        text-align: center;
+    }
+
+    .social a {
+        height: 36px;
+        width: 36px;
+        font-size: 20px;
+    }
+
+    /* ── About ── */
+    .abtout_he h1 {
+        font-size: 26px;
+    }
+
+    .about-image img {
+        width: 80%;
+    }
+
+    .about-intro {
+        font-size: 14px;
+    }
+
+    .why-choose-us h3,
+    .customer-satisfaction h3 {
+        font-size: 19px;
+    }
+
+    .why-list li {
+        font-size: 14px;
+    }
+
+    .customer-satisfaction p {
+        font-size: 14px;
+    }
+
+    .customer-images img {
+        width: 90px;
+        height: 85px;
+    }
+}
+
+
+
+/* =========================================
+   RESPONSIVE DESIGN FOR ABOUT US
+   ========================================= */
+
+/* Large Tablets & Small Laptops (max-width: 991px) */
+@media (max-width: 680px) {
+    .about-main {
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: center;
+        padding: 0 20px; /* Add breathing room on the sides */
+    }
+
+    .about-image {
+        width: 100%;
+        padding-left: 0;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    .about-image img {
+        width: 60%; /* Scale down the main image slightly */
+        height: auto; /* Prevent image distortion */
+    }
+
+    .abt-text {
+        width: 100%; /* Take up full width on smaller screens */
+    }
+
+    .customer-images {
+        flex-wrap: wrap; /* Allow images to wrap to the next line */
+        justify-content: center;
+    }
+}
+
+/* Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .abtout_he h1 {
+        font-size: 32px; /* Scale down heading */
+    }
+
+    .about-intro {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .why-choose-us h3,
+    .customer-satisfaction h3 {
+        font-size: 26px;
+    }
+
+    .why-list li {
+        font-size: 18px;
+        padding-left: 30px; /* Ensure checkmarks don't overlap text */
+    }
+
+    .customer-satisfaction p {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .about-image img {
+        width: 80%; /* Take up more space on mobile */
+    }
+
+    .customer-images img {
+        width: 120px; /* Shrink customer images */
+        height: 120px;
+    }
+}
+
+/* Small Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .abtout_he {
+        margin-top: 60px; /* Reduce top margin to save space */
+    }
+
+    .abtout_he h1 {
+        font-size: 28px;
+    }
+
+    .about-intro,
+    .customer-satisfaction p,
+    .why-list li {
+        font-size: 16px; /* Standardize body text size for readability */
+    }
+
+    .about-image img {
+        width: 100%; /* Full width for the smallest screens */
+    }
+
+    .customer-images img {
+        width: 100px; /* Further shrink customer images */
+        height: 100px;
+    }
+}
