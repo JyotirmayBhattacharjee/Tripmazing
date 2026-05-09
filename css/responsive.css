@@ -1,9 +1,8 @@
 /* ============================================================
-   responsive.css — Tripmazing Home Page
-   Link AFTER style.css:
+   responsive.css — Tripmazing (All Pages)
+   Link AFTER style.css on every page:
    <link rel="stylesheet" href="./css/responsive.css">
    ============================================================ */
-
 
 /* ── Hamburger button (hidden on desktop) ── */
 .hamburger {
@@ -15,7 +14,7 @@
     border: none;
     outline: none;
     padding: 8px;
-    margin-right: 33px;
+    margin-right: 14px;
     margin-left: auto;
     z-index: 1001;
 }
@@ -46,7 +45,6 @@
    Tablet  ≤ 1024px
 ══════════════════════════════════════ */
 @media (max-width: 1024px) {
-
     nav .logo {
         margin-left: 4%;
     }
@@ -82,6 +80,34 @@
     .newsletter form input:first-child {
         width: 250px;
     }
+
+    .about-main {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .about-image {
+        width: 100%;
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    .about-image img {
+        width: 55%;
+        height: auto;
+    }
+
+    .abt-text {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .customer-images img {
+        width: 130px;
+        height: 120px;
+    }
 }
 
 
@@ -89,28 +115,6 @@
    Mobile  ≤ 768px
 ══════════════════════════════════════ */
 @media (max-width: 768px) {
-
-
-
-    .banner {
-        position: relative;
-        width: 100%;
-        height: 100vh;
-        overflow: hidden;
-    }
-
-    .banner video {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        min-width: 100%;
-        min-height: 100%;
-        width: auto;
-        height: 60%;
-        /* object-fit: cover; */
-        pointer-events: none;
-    }
 
     /* ── Navbar ── */
     nav {
@@ -120,25 +124,22 @@
         padding: 6px 16px;
         position: fixed;
         top: 0;
+        left: 0;
         width: 100%;
         z-index: 1000;
         border: none;
-        /* remove all 4-side border */
         border-bottom: 2px solid black;
-        /* keep only bottom line    */
     }
 
     nav .logo {
         width: 48px;
-        margin: 8px 0 8px 0;
+        margin: 8px 0;
     }
 
-    /* Show hamburger */
     .hamburger {
         display: flex;
     }
 
-    /* ── Dropdown menu (hidden by default) ── */
     nav ul.navbar {
         display: none;
         flex-direction: column;
@@ -148,13 +149,11 @@
         left: 0;
         width: 100%;
         padding: 12px 0 20px;
+        padding-left: 0;
         margin: 0;
         border: none;
-        border-left: none;
-        padding-left: 0;
         box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
         z-index: 998;
-        margin-right: 10px;
     }
 
     nav ul.navbar.open {
@@ -184,14 +183,54 @@
         box-shadow: none;
     }
 
-    /* ── Hero ── */
+    /* ── Banner & Video ── */
+    .banner {
+        position: relative;
+        width: 100%;
+        height: 60vh;
+        overflow: hidden;
+        margin-top: 68px;
+    }
+
+    .banner video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        object-fit: cover;
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-image: linear-gradient(rgba(1, 0, 5, 0.3), rgba(4, 1, 17, 0.3));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* ── Hero Title ── */
     .title {
-        margin-top: 30vh;
-        padding: 10px 20px;
+        margin-top: 0;
+        padding: 20px;
+        text-align: center;
+        width: 100%;
+        position: static;
+        transform: none;
     }
 
     .title h1 {
-        font-size: 7vw;
+        font-size: 8vw;
         letter-spacing: 3px;
     }
 
@@ -202,7 +241,7 @@
     .button {
         font-size: 16px;
         padding: 10px 22px;
-        margin-top: 3vh;
+        margin-top: 2vh;
     }
 
     /* ── Services ── */
@@ -253,11 +292,10 @@
     }
 
     .col-content img {
-        height: 55vh;
+        height: 220px;
         width: 100%;
         margin-bottom: 24px;
         border-radius: 18px;
-
     }
 
     .col-content h5 {
@@ -351,6 +389,85 @@
         font-size: 12px;
         padding: 0 12px;
     }
+
+    /* ── About Page ── */
+    .abtout_he {
+        margin-top: 90px;
+        text-align: center;
+    }
+
+    .abtout_he h1 {
+        font-size: 32px;
+    }
+
+    .about {
+        padding: 0 16px;
+    }
+
+    .about-main {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding-top: 20px;
+    }
+
+    .about-image {
+        width: 100%;
+        justify-content: center;
+        padding-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .about-image img {
+        width: 70%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .abt-text {
+        width: 100%;
+        padding: 0 10px;
+        margin-top: 0;
+    }
+
+    .about-intro {
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 24px;
+    }
+
+    .about-content {
+        gap: 30px;
+    }
+
+    .why-choose-us h3,
+    .customer-satisfaction h3 {
+        font-size: 26px;
+        margin-bottom: 12px;
+    }
+
+    .why-list li {
+        font-size: 18px;
+        margin-bottom: 10px;
+        padding-left: 30px;
+    }
+
+    .customer-satisfaction p {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .customer-images {
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .customer-images img {
+        width: 120px;
+        height: 120px;
+    }
 }
 
 
@@ -359,142 +476,10 @@
 ══════════════════════════════════════ */
 @media (max-width: 480px) {
 
-    .title h1 {
-        font-size: 9vw;
-    }
-
-    .title p {
-        font-size: 19px;
-    }
-
-    /* Services: single column */
-    .rowitems {
-        grid-template-columns: 1fr;
-        margin: 12px;
-    }
-
-    /* Newsletter: stack button below input */
-    .newsletter form {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
-    .newsletter form input:first-child {
-        width: 90%;
-        max-width: 280px;
-        padding: 16px 20px;
-        border-radius: 20px;
-    }
-
-    .newsletter form input:last-child {
-        position: static;
-        width: 90%;
-        max-width: 280px;
-        margin-top: 10px;
-        border-radius: 20px;
-        text-align: center;
-    }
-
-    .social a {
-        height: 36px;
-        width: 36px;
-        font-size: 20px;
-    }
-}
-
-
-/* ══════════════════════════════
-       About Us Page  ≤ 768px
-    ══════════════════════════════ */
-
-.abtout_he {
-    margin-top: 80px;
-    text-align: center;
-}
-
-.abtout_he h1 {
-    font-size: 30px;
-}
-
-.about {
-    padding: 0 16px;
-}
-
-.about-main {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding-top: 20px;
-}
-
-.about-image {
-    width: 100%;
-    justify-content: center;
-    padding-left: 0;
-}
-
-.about-image img {
-    width: 65%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-.abt-text {
-    width: 100%;
-    padding: 0 10px;
-    margin-top: 0;
-}
-
-.about-intro {
-    font-size: 16px;
-    line-height: 26px;
-    margin-bottom: 24px;
-}
-
-.about-content {
-    gap: 30px;
-}
-
-.why-choose-us h3,
-.customer-satisfaction h3 {
-    font-size: 22px;
-    margin-bottom: 12px;
-}
-
-.why-list li {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-.customer-satisfaction p {
-    font-size: 15px;
-    line-height: 26px;
-}
-
-.customer-images {
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-}
-
-.customer-images img {
-    width: 120px;
-    height: 110px;
-}
-
-
-
-/* ═════════════════════════════════════
-   Small Mobile  ≤ 480px
-══════════════════════════════════════ */
-@media (max-width: 480px) {
-
-    /* ── Video full cover ── */
+    /* ── Banner ── */
     .banner {
-        height: 100vh;
-        overflow: hidden;
+        height: 55vh;
+        margin-top: 68px;
     }
 
     .banner video {
@@ -510,7 +495,11 @@
         pointer-events: none;
     }
 
-    /* ── Home ── */
+    .content {
+        height: 100%;
+    }
+
+    /* ── Hero ── */
     .title h1 {
         font-size: 9vw;
     }
@@ -519,11 +508,13 @@
         font-size: 13px;
     }
 
+    /* ── Services ── */
     .rowitems {
         grid-template-columns: 1fr;
         margin: 12px;
     }
 
+    /* ── Newsletter ── */
     .newsletter form {
         flex-direction: column;
         align-items: center;
@@ -553,16 +544,20 @@
     }
 
     /* ── About ── */
+    .abtout_he {
+        margin-top: 80px;
+    }
+
     .abtout_he h1 {
-        font-size: 26px;
+        font-size: 28px;
     }
 
     .about-image img {
-        width: 80%;
+        width: 100%;
     }
 
     .about-intro {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .why-choose-us h3,
@@ -571,127 +566,15 @@
     }
 
     .why-list li {
-        font-size: 14px;
-    }
-
-    .customer-satisfaction p {
-        font-size: 14px;
-    }
-
-    .customer-images img {
-        width: 90px;
-        height: 85px;
-    }
-}
-
-
-
-/* =========================================
-   RESPONSIVE DESIGN FOR ABOUT US
-   ========================================= */
-
-/* Large Tablets & Small Laptops (max-width: 991px) */
-@media (max-width: 680px) {
-    .about-main {
-        flex-direction: column;
-        /* Stack image and text vertically */
-        align-items: center;
-        padding: 0 20px;
-        /* Add breathing room on the sides */
-    }
-
-    .about-image {
-        width: 100%;
-        padding-left: 0;
-        justify-content: center;
-        margin-bottom: 40px;
-    }
-
-    .about-image img {
-        width: 60%;
-        /* Scale down the main image slightly */
-        height: auto;
-        /* Prevent image distortion */
-    }
-
-    .abt-text {
-        width: 100%;
-        /* Take up full width on smaller screens */
-    }
-
-    .customer-images {
-        flex-wrap: wrap;
-        /* Allow images to wrap to the next line */
-        justify-content: center;
-    }
-}
-
-/* Mobile Devices (max-width: 768px) */
-@media (max-width: 768px) {
-    .abtout_he h1 {
-        font-size: 32px;
-        /* Scale down heading */
-    }
-
-    .about-intro {
-        font-size: 18px;
-        line-height: 28px;
-    }
-
-    .why-choose-us h3,
-    .customer-satisfaction h3 {
-        font-size: 26px;
-    }
-
-    .why-list li {
-        font-size: 18px;
-        padding-left: 30px;
-        /* Ensure checkmarks don't overlap text */
-    }
-
-    .customer-satisfaction p {
-        font-size: 18px;
-        line-height: 26px;
-    }
-
-    .about-image img {
-        width: 80%;
-        /* Take up more space on mobile */
-    }
-
-    .customer-images img {
-        width: 120px;
-        /* Shrink customer images */
-        height: 120px;
-    }
-}
-
-/* Small Mobile Devices (max-width: 480px) */
-@media (max-width: 480px) {
-    .abtout_he {
-        margin-top: 60px;
-        /* Reduce top margin to save space */
-    }
-
-    .abtout_he h1 {
-        font-size: 28px;
-    }
-
-    .about-intro,
-    .customer-satisfaction p,
-    .why-list li {
         font-size: 16px;
-        /* Standardize body text size for readability */
     }
 
-    .about-image img {
-        width: 100%;
-        /* Full width for the smallest screens */
+    .customer-satisfaction p {
+        font-size: 16px;
     }
 
     .customer-images img {
         width: 100px;
-        /* Further shrink customer images */
         height: 100px;
     }
 }
